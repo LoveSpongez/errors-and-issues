@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+ul {
+    list-style: none;
+}
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+}
+body {
+    font-family: 'Nunito Sans';
+    font-weight: 400;
+    height: 100%;
+}
+h1, h2, h3 {
+    font-family: 'Yeseva One';
+    font-weight: 400;
+}
+h2 {
+    font-size: 22px;
+}
+a {
+    text-decoration: none;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.section_name {
+    font-size: 22px;
+    line-height: 30px;
+}
+.text_accent {
+    color: #E3B873;
+}
+.text_white {
+    color: #FFFFFF;
+}
+.text_center {
+    text-align: center;
+}
+.yeseva {
+    font-family: 'Yeseva One';
+}
+.button_gold {
+    color: #FFFFFF;
+    background-color: #E3B873;
+    box-shadow: 0px 5px 15px 0px #E3B8734D;
+}
+.button_transparent {
+    color: #FFFFFF;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+}
+.button_big {
+    padding: 1.1rem 2rem;
+    font-size: 11px;
+}
+.background_dark {
+    background-color: #181818;
+}
+.desktop_only {
+    display: none;
+}
+.mobile_only {
+    display: grid;
+}
+@media (min-width:1300px) {
+    .desktop_only {
+        display: grid;
+    }
+    .mobile_only {
+        display: none !important;
+    }
+}
+/*---------------------------------------HEADER----------------------------------------------*/
+header {
+    background-color: #181818;
+}
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 0;
+    font-size: 11px;
+}
+.header-logo {
+    color: #E3B873;
+}
+.header-phone {
+    color: #FFFFFF;
+}
+
+nav {
+    color: #FFFFFF;
+}
+nav ul {
+    display: flex;
+    gap: 3rem;
+}
+.header-contact {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+@media (min-width:1300px) {
+    .header-top {
+        padding: 2rem 0;
+    }
+    .header-phone {
+        color: #E3B873;
+        text-decoration: underline;
+    }
+}
+/*---------------------------------------HEADER_END----------------------------------------------*/
+/*---------------------------------------CALCULATE----------------------------------------------*/
+.calculate {
+    background-image: url('/images/mobile/background-mobile.png');
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+}
+.calculate-block {
+    display: grid;
+    gap: 1rem;
+    padding: 4rem 0 3rem 0;
+}
+.calculate_description {
+    font-size: 14px;
+}
+.calculate-buttons {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media (min-width:1300px) {
+    .calculate {
+        background-image: url('/images/desktop/calculate-background-desktop.jpg');
+        background-color: rgba(0, 0, 0, 0.7);
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    .calculate-block {
+        padding: 13rem 40rem 13rem 3rem;
+    }
+    .page_name {
+        font-size: 40px;
+        line-height: 53px;
+    }
+    .calculate_description {
+        font-size: 22px;
+    }
+    .calculate-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .calculate-buttons button {
+        max-width: 15rem;
+    }
+}
+/*---------------------------------------CALCULATE_END--------------------------------------------*/
+/*---------------------------------------COMPLETED--------------------------------------------*/
+.completed {
+    background-color: #181818;
+}
+.completed-block {
+    padding-top: 3rem;
+    gap: 2rem;
+}
+.completed-description {
+    font-size: 11px;
+    padding: 0 .9rem 3rem .9rem;
+}
+.completed-block div {
+    position: relative;
+}
+.complete-prev-button {
+    position: absolute;
+    top: 40%;
+    left: 1rem;
+}
+.complete-next-button {
+    position: absolute;
+    top: 40%;
+    right: 1rem;
+}
+.completed-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.completed-info-block {
+    display: grid;
+    gap: 1rem;
+}
+.completed-info-block h3 {
+    font-size: 14px;
+}
+.completed-info-block div {
+    font-size: 11px;
+}
+
+@media (min-width:1300px) {
+    .completed-block {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-areas: 
+        '. completed-spaces'
+        'completed-text completed-image';
+        margin-top: 3rem;
+        padding-bottom: 25rem;
+    }
+    .completed-block-spaces {
+        grid-area: completed-spaces;
+        display: flex;
+        font-size: 14px;
+        color: #454545;
+        gap: 4rem;
+    }
+    .completed-block-spaces li:first-child {
+        color: #E3B873;
+        border-bottom: 1px solid #E3B873;
+    }
+
+    .completed-block-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: space-between;
+        grid-area: completed-text;
+    }
+    .completed-block-text h3 {
+        font-size: 27px;
+    }
+    .completed-description {
+        padding: 0;
+        font-size: 14px;
+        line-height: 27px;
+    }
+    .completed-info-block {
+        gap: 0.5rem;
+    }
+    .completed-info-block h3 {
+        font-size: 18px;
+    }
+    .completed-info-block div {
+        font-size: 13px;
+    }
+    .completed-block-text-controls {
+        max-width: 15rem;
+    }
+
+    .completed-block-gallery {
+        grid-area: completed-image;
+        vertical-align: middle;
+    }
+}
+/*---------------------------------------COMPLETED_END--------------------------------------------*/
+/*---------------------------------------ONLINE_CONTROL------------------------------------------*/
+.online_control {
+    background-color: #181818;
+    padding-top: 4rem;
+}
+.online_control-camera {
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.online_control-video {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.online_control-video_image {
+    filter: brightness(20%);
+}
+.online_control-video-play {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*---------------------------------------ONLINE_CONTROL_END----------------------------------------*/
